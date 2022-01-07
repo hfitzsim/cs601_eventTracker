@@ -1,0 +1,252 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+main {
+    transition: all .6s;
+    min-height:75vh;
+}
+p {
+    color: grey;
+    font-size: 12px;
+  }
+
+.header {
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    padding: 25px;
+    background: #0D11E7;
+    margin: 0;
+    white-space: nowrap;
+}
+body header {
+    position: sticky; 
+    top: 0;
+}
+.header #neg-spc {
+    width: 45vw;
+}
+.header a{
+    font-weight: 100;
+    text-decoration: none;
+    font-size: 1.25em;
+    color: white;
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 15px 20px 15px 20px;
+}
+#main-content {
+    height: 900px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    background: #d4dffc;
+}
+#main-events {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #d4dffc;
+}
+#more {
+    align-self: flex-start;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+footer {
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: white;
+    padding: 25px;
+    background: #ffffff;
+    margin: 0;
+}
+#social-media {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+footer #neg-spc {
+    width: 40vw;
+}
+img {
+    max-height: 50px;
+    padding: 2.5%;
+}
+#bu-logo {
+    margin-left: 140px;
+}
+.content {
+    padding: 0 18px;
+    width:65vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s eas-out;
+    background-color: #ffffff;
+}
+#count {
+    font-size: 7vw;
+    font-weight: 700;
+    margin-left: 50px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+}
+.input-container {
+    min-width: 350px;
+    max-width: 650px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-items: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px #333;
+    margin: auto;
+}
+.holder{
+    color: #141414;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 65vw;
+    height: auto;
+    padding: 50px;
+    margin: 10px;
+    border: none;
+    box-shadow: 0px 0px 5px 2px #3e6cb38c;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 40px;
+    font-weight: 100;
+}
+.collapsible {
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: #777777;
+}
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2212";
+}
+
+.holder:hover, #more:hover, a:hover{
+    color: #d30069;
+}
+#events-attended {
+    color: rgb(55, 199, 110);
+}
+
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    background-color: #333;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 75px;
+    transition: all .5s;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #bdbdbd;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: white;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/*iphone*/
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+{ 
+h1, a{
+    font-size: medium;
+    white-space: nowrap;
+}
+.header{
+    max-height:fit-content;
+    padding: 5%;
+}
+.menu-option {
+    font-size: 0.5em;
+    white-space: nowrap;
+}
+img {
+    max-height: 20px;
+}
+#more {
+    font-size: 20px;
+    align-self: center;
+}
+footer{
+    justify-content: center;
+}
+#bu-logo {
+    margin-left: 0;
+}
+#main-content {
+    height: fit-content;
+}
+.header * {
+    margin: 2%;
+}
+}

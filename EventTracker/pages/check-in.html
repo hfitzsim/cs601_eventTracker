@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/EventTracker/images/favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/EventTracker/styles/style.css" />
+    <title>Term Project</title>
+</head>
+
+<body>
+    <header>
+        <div id="header" class="header">
+          <div>
+            <h1 id="more">&#9776;</h1>
+            <h1 class="app-name" id="app-name">Event Tracker</h1>
+          </div>
+            <a class="menu-option" class="header-btn" id="logout-btn">Log out</a>
+        </div>
+      </header>
+    <div id="menu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="closebtn"> &times;</a>
+        <a href="/EventTracker/pages/all-events.html">Discover Events</a>
+        <a href="/EventTracker/pages/users-events.html">Your Events</a>
+        <a href="/EventTracker/pages/rsvp.html">RSVP</a>
+        <a href="/EventTracker/pages/check-in.html">Check-in</a>
+        <a href="/EventTracker/pages/progress.html">Progress</a>
+        <a href="/EventTracker/pages/account.html">Account</a>
+    </div>
+    <main id="main-content">
+        <div class="input-container">
+            <h1>Confirm Attendence</h1>
+            <form action="../php/check-event-pw.php" method="post">
+                <label for="select-event">Select registered event: </label>
+                <select class="form-field" id="select-event" name="registeredEvent">
+                </select>
+                <label for="event-key">Enter event passcode that was provided at the event:</label>
+                <input type="text" id="event-key" class="form-field" name="eventKey"/>
+                <button type="submit" class="submit-btn" id="register-btn">Submit</button>
+            </form>
+
+        </div>
+    </main>
+    <footer>
+        <img src="/EventTracker/images/boston_univ_rgb.png" id="bu-logo">
+        <div id="social-media">
+            <img src="/EventTracker/images/fb.png" id="fb">
+            <img src="/EventTracker/images/ig.png" id="ig">
+            <img src="/EventTracker/images/twitter.png" id="tw">
+            <img src="/EventTracker/images/linkedin.png" id="ln">
+            <img src="/EventTracker/images/yt.png" id="yt">
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,447 @@
+/*ELEMENTS*/
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #252941;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #f1f1f1;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+img:not(#form-img) {
+    max-height: 50px;
+    padding: 2.5%;
+}
+body main:not(#main-events) {
+    flex: 1;
+    transition: all .6s;
+    min-height: 88vh;
+    margin: 2vh 0 2vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    color: grey;
+    font-size: 12px;
+  }
+body footer {
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    max-height: 100px;
+    width: 100vw;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+    color: white;
+    background-color: #252941;
+    white-space: nowrap;
+}
+
+body header {
+    position: sticky; 
+    top: 0;
+}
+
+button {
+    background-color: #6622cc;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+label {
+    color: #696969;
+    font-size: 0.75em;
+    font-weight: 100;
+    margin-bottom: 1.5vh;
+}
+main div#landing {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+/*CLASSES*/
+main div.information-section{
+    width: 75vw; 
+    height: 550px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 7px;
+    margin: 1.5vh;
+    box-shadow: 0px 0px 5px 2px rgb(211, 211, 211);
+    padding-left: 5vw;
+    padding-top: 5vh;
+}
+div.circle{
+    height: 26vw;
+    width: 26vw;
+    border-radius: 50%;
+    display: flex;
+    box-shadow: 0px 0px 5px 2px rgb(211, 211, 211);
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s, height 0.5s;
+}
+
+div.circle:hover {
+    height: 33vw;;
+    width: 33vw;
+}
+.circle a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+    white-space: nowrap;
+}
+a.circle-link:hover {
+    line-height: 0;
+    text-decoration: none;
+    color: #6622cc;
+}
+a.circle-link:visited{
+    text-decoration: none;
+    color: white;
+}
+.c1 {
+    background-color: rgb(255, 193, 142);
+}
+.c2 {
+    background: rgb(255, 199, 211);
+}
+.c3 {
+    background-color: rgb(209, 255, 209);
+}
+.c4 {
+    background-color: rgb(185, 233, 255);
+}
+.submit-btn {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #2378d1;
+    cursor: pointer;
+    outline: none;
+    align-self:baseline;
+  }
+.submit-btn:hover, .input-btn:hover {
+    background-color: #e40066;
+}
+.input-btn {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #2378d1;
+    cursor: pointer;
+    outline: none;
+    align-self:baseline;
+}
+h1.app-name:hover {
+    cursor: pointer;
+    color: #e40066;
+}
+.app-name {
+    margin-left: 10%;
+}
+.form-field {
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+    margin-bottom: 2.5vh;
+    border-radius: 3px;
+    outline: none;
+    padding: 0 0 5px 5px;
+  }
+.form-field::placeholder {
+    color: #696969;
+}
+.header {
+    max-height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #252941;
+    background-color: #f1f1f1;
+    margin: 0;
+    white-space: nowrap;
+}
+.header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    margin-left: 5%;
+}
+.menu-option {
+    margin-right: 10%;
+}
+
+#header-btn {
+    margin-right: 10px;
+}
+.header a{
+    font-weight: 100;
+    text-decoration: none;
+    font-size: 1.25em;
+    color: #252941;
+    border-radius: 5px;
+    padding: 15px 20px 15px 20px;
+}
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s eas-out;
+    background-color: #ffffff;
+}
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    color: #333;
+}
+textarea {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div.input-container {
+    width: 50vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 7px;
+    margin: 1.5vh;
+    box-shadow: 0px 0px 5px 2px rgb(211, 211, 211);
+    padding: 5vh 5vw 5vh 5vw;
+}
+form ~ div {
+    display: flex;
+    flex-direction: row;
+}
+[title~=password] {
+    display: flex;
+    flex-direction: column;
+}
+.holder{
+    color: #141414;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 65vw;
+    height: auto;
+    padding: 50px;
+    margin: 10px;
+    border: none;
+    box-shadow: 0px 0px 5px 2px #3e6cb38c;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 40px;
+    font-weight: 100;
+}
+.collapsible {
+    background-color: #252941;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 2.5vh;
+    border-radius: 5px;
+    outline: none;
+}
+.active, .collapsible:hover {
+    background-color: #777777;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2212";
+}
+
+.holder:hover, #more:hover {
+    color: #e40066;
+}
+
+#header-btn:hover {
+    color: #e40066;
+}
+
+/*IDs*/
+#error-msg-holder {
+    height:10vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+img#form-img {
+    max-height: 100px;
+    max-width: 100px;
+    padding: 2.5vw;
+}
+#bu-logo {
+    margin-left: 12%;
+}
+
+img#bu-logo:hover {
+    cursor: pointer;
+}
+
+#error-msg {
+    color: crimson;
+    text-align: center;
+}
+#main-content {
+    flex: 1;
+    min-height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+}
+#account-content {
+    flex: 1;
+    min-height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#main-events {
+    flex: 1;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 85vh;
+}
+#more {
+    align-self: flex-start;
+    cursor: pointer;
+    padding-bottom: 5px;
+    margin-right: 2vw;
+}
+#logout-btn:hover {
+    cursor: pointer;
+}
+#social-media {
+    display: flex;
+    cursor: pointer;
+    padding: 1%;
+    margin-right: 20%;
+}
+
+#count {
+    font-size: 7vw;
+    font-weight: 700;
+    margin-left: 50px;
+}
+
+/*SIDE NAV*/
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    background-color: #252941;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 75px;
+    transition: all .5s;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #2378d1
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media screen 
+and (min-device-width: 300px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+{ 
+    body header {
+        width: 100vw;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    #app-name {
+        display: none;
+    }
+    a {
+        font-size: 0.5em;
+    }
+    a.circle-link {
+        font-size: 0.75em;
+    }
+    img {
+        height: 25px;
+        width: 25px;
+    }
+    td, p {
+        font-size: 0.75em;
+    }
+    div.input-container {
+        width: 85%;
+    }
+}

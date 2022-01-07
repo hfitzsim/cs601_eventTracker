@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="/EventTracker/images/favicon-16x16.png">
+  <title>Term Project</title>
+
+  <link rel="stylesheet" type="text/css" href="/EventTracker/styles/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="../scripts/main.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div id="header" class="header">
+      <div>
+        <h1 id="more">&#9776;</h1>
+        <h1 class="app-name" id="app-name">Event Tracker</h1>
+      </div>
+        <a class="menu-option" class="header-btn" id="logout-btn">Log out</a>
+    </div>
+  </header>
+
+    <div id="menu" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" id="closebtn" > &times;</a>
+      <a href="../pages/create-event.html">Create Event</a>
+      <a href="../pages/all-events.html">All Events</a>
+      <a href="../pages/users-events.html">Your Events</a>
+      <a href="../pages/users-list.html">All Users</a>
+      <a href="../pages/account.html">Account</a>
+      <a href="../pages/main.html">Go to Main View</a>
+    </div>
+
+  <main id="main-content">
+
+      <div title="create-event-form" class="input-container" style="width:45vw;">
+        <form action="/EventTracker/php/create-event.php" method="post">
+        <h1>Add Event</h1>
+        <h4>Upload Event Image</h4>
+        <img id="form-img" src="/EventTracker/images/event-icon.png" />
+        <input type="file" id="event-img" class="input-btn" name="eventimage" />
+          <h6>Title <span style="color:grey;font-weight:200;margin-left:5vh;">Name of Event</span> </h6>
+          <input type="text" id="title-field" class="form-field" placeholder="Event Name" name="eventname"/>
+          <h6>Description of Event</h6>
+          <textarea id="description-field" name="eventdesc" rows="4" cols="50"></textarea>
+            <h6>Location of Event</h6>
+          <input type="text" id="location-field" class="form-field" placeholder="Location" name="eventlocation"/>
+          <div title="Date and Time of Event" class="form-section">
+            <h6>Date and Time of Event</h6>
+            <input type="date" id="date-field" class="form-field" name="eventdate" />
+            <label for="start-field">Start</label>
+            <input type="time" id="start-field" class="form-field" name="eventstart" />
+            <label for="end-field">End</label>
+            <input type="time" id="end-field" class="form-field" name="eventend" />
+            <label for="event-pw-field">Set Event Passcode</label>
+            <input type="text" id="event-pw-field" class="form-field" name="eventpw" />
+          </div>  
+            <h5>Primary Event Contact</h5>
+            <h6>Contact Name</h6>
+            <input type="text" id="firstname-field" class="form-field" placeholder="First Name" name="firstname"/>
+            <input type="text" id="lastname-field" class="form-field" placeholder="Last Name" name="lastname"/>
+            <h6>Email</h6>
+            <input type="text" id="email-field" class="form-field" placeholder="userid@bu.edu" name="email"/>
+            <h6>Phone Number</h6>
+            <input type="number" id="phone-field" class="form-field" placeholder="555-555-5555" name="phone"/>
+            <input type="submit" class="input-btn" style="margin-top:15px;" id="submit-btn" value="Add Event"></input>
+    </form>
+    </div>
+
+  </main>
+    <footer>
+      <img src="/EventTracker/images/boston_univ_rgb.png" id="bu-logo">
+      <div id="social-media">
+        <img src="/EventTracker/images/fb.png" id="fb">
+        <img src="/EventTracker/images/ig.png" id="ig">
+        <img src="/EventTracker/images/twitter.png" id="tw">
+        <img src="/EventTracker/images/linkedin.png" id="ln">
+        <img src="/EventTracker/images/yt.png" id="yt">
+      </div>
+    </footer>
+
+
+</body>
+
+</html>

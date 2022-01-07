@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://localhost/EventTracker/pages/signup.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="http://localhost/EventTracker/images/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="./Term Project_files/login.css">
+    <link rel="stylesheet" type="text/css" href="./Term Project_files/style.css">
+
+    <script src="./Term Project_files/jquery.min.js"></script>
+    <title>Term Project</title>
+    
+  </head>
+
+  <body>
+    <header>
+      <div id="header" class="header">
+        <h1 id="more" onclick="openNav()">☰</h1>
+        <h1>Event Tracker</h1>
+        <div id="neg-spc"></div>
+        <a href="http://localhost/EventTracker/pages/EventTracker/pages/login.html" class="menu-option">Log in</a>
+  
+      </div>
+    </header>
+    <div id="menu" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" id="closebtn" onclick="closeNav()"> ×</a>
+      <a href="http://localhost/EventTracker/pages/test.html">Testing</a>
+      <a href="http://localhost/EventTracker/pages/events.html">Events</a>
+      <a href="http://localhost/EventTracker/pages/progress.html">Progress</a>
+      <a href="http://localhost/EventTracker/pages/signup.html#">QR Code</a>
+      <a href="http://localhost/EventTracker/pages/account.html">Account</a>
+      <a href="http://localhost/EventTracker/pages/login.html">Log Out</a>
+    </div>
+
+    <main id="main-content">
+    <div class="input-container">
+      <div id="error-msg-holder">
+        <p id="error-msg" style="display:none">Error: account already exists.</p>
+      </div>
+      <h2>Signup</h2>
+          <form id="signup-form" method="post">
+          <input type="text" id="email-field" class="signup-form-field" placeholder="user@example.com" name="email">
+          <input type="password" id="password-field" class="signup-form-field" placeholder="Password" name="pw">
+          <input type="submit" value="Signup" id="submit-btn">
+        </form>
+      </div>
+     
+    </main>
+
+      <footer>
+        <img src="./Term Project_files/boston_univ_rgb.png" id="bu-logo">
+        <div id="neg-spc"></div>
+        <div id="social-media">
+          <img src="./Term Project_files/fb.png" id="fb">
+          <img src="./Term Project_files/ig.png" id="ig">
+          <img src="./Term Project_files/twitter.png" id="tw">
+          <img src="./Term Project_files/linkedin.png" id="ln">
+          <img src="./Term Project_files/yt.png" id="yt">
+        </div>
+        <script type="text/javascript">
+          function openNav() {
+            document.getElementById("menu").style.width = "250px";
+          };
+          function closeNav() {
+            document.getElementById("menu").style.width = "0px";
+          };
+        
+          let email_input = $("#email-field").val();
+          let pw_input = $("#password-field").val();
+
+          let myFunction  = async () => {
+              let response = await fetch('signup.php', {
+                  method: 'POST',
+                  body: {
+                    email: email_input,
+                    pw_input: pw_input
+                  }
+              }) .then (data => {
+                  return data.json();
+                  console.log(data.json());
+              })
+          };
+        
+          $("#submit-btn").click(function() {
+              myFunction();
+              window.location.href="/EventTracker/pages/create_event.html";
+          });
+
+        </script>  
+
+    </footer>
+  
+</body></html>
